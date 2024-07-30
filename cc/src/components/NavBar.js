@@ -21,10 +21,15 @@ function NavBar() {
   }
 
   return (
-    <div className="Nav" >
+    <div className="Nav">
       <div className="company">
-        <img src={logo} alt="coursecompass" id="compass" onClick={() => navigate("/login")}/>
-        <p onClick={() => navigate("/login")}>CourseCompass</p>
+        <img
+          src={logo}
+          alt="coursecompass"
+          id="compass"
+          onClick={() => navigate("/")}
+        />
+        <p onClick={() => navigate("/")}>CourseCompass</p>
       </div>
       <div className="middle">
         <ul>
@@ -41,6 +46,7 @@ function NavBar() {
             onMouseOver={() => handleMouseOver("aboutUs")}
             onMouseOut={() => handleMouseOut("aboutUs")}
             style={{ fontWeight: boldItems.aboutUs ? "bold" : null }}
+            onClick={() => navigate("/aboutus")}
           >
             About Us
           </li>
