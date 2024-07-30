@@ -3,18 +3,24 @@ import CardsTeam from "./CardsTeam";
 
 function AboutUs() {
   const arrow = process.env.PUBLIC_URL + "/arrow.png";
-  const img1 = process.env.PUBLIC_URL + "/img1.jpeg";
+
+  const img1 = process.env.PUBLIC_URL + "/img1.jpg";
+  const img2 = process.env.PUBLIC_URL + "/img2.jpeg";
+  const img3 = process.env.PUBLIC_URL + "/img3.jpeg";
+  const img4 = process.env.PUBLIC_URL + "/img4.jpeg";
+
+
 
   const teamMembers = [
     { img: img1, name: "Swayam Aggarwal" },
-    { img: img1, name: "Prarthana Samal" },
-    { img: img1, name: "Kriti Singh" },
-    { img: img1, name: "Armanveer Kaur" },
+    { img: img2, name: "Prarthana Samal" },
+    { img: img3, name: "Kriti Singh" },
+    { img: img4, name: "Armanveer Kaur" },
   ];
 
   return (
     <div className="Page3">
-      <NavBar />
+      <NavBar /> 
       <div className="cont-team">
         <div className="yellow-surr">
           <div className="Meethead">Meet our team</div>

@@ -349,7 +349,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .bunch-container {
   position: absolute;
-  right: -220px; 
+  right: -260px; 
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -361,6 +361,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   font-weight: 400;
   margin-left: 10px;
   white-space: nowrap;
+  font-size:20px;
 }
 
 #placement {
@@ -421,3 +422,5 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   text-align: center;
   opacity: 40%;
 }
+
+
