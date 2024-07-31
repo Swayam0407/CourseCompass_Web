@@ -55,6 +55,7 @@ function NavBar() {
             onMouseOver={() => handleMouseOver("trending")}
             onMouseOut={() => handleMouseOut("trending")}
             style={{ fontWeight: boldItems.trending ? "bold" : null }}
+            onClick={() => navigate("/trending")}
           >
             Trending
           </li>
