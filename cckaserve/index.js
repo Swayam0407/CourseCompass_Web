@@ -2,40 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-const sqlite3 = require("sqlite3").verbose();
+const db = require("./database");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-
-// Create and open the database
-const db = new sqlite3.Database("./users.db", (err) => {
-  if (err) {
-    console.error("Error opening database:", err.message);
-  } else {
-    console.log("Connected to the SQLite database.");
-
-    // Create the users table if it doesn't exist
-    db.run(
-      `CREATE TABLE IF NOT EXISTS users (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      email TEXT NOT NULL UNIQUE,
-      password TEXT NOT NULL
-    )`,
-      (err) => {
-        if (err) {
-          console.error("Error creating table:", err.message);
-        } else {
-          console.log("Table created or already exists.");
-        }
-      }
-    );
-  }
-});
 
 // Route to clear the database
 app.post("/api/clear", (req, res) => {

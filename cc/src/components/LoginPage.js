@@ -120,7 +120,6 @@ function LoginPage() {
           </div>
         </div>
       </div>
-      {final}
     </div>
   );
 }
